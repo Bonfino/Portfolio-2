@@ -1,0 +1,14 @@
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0f172a;
+  z-index: -1;
+}
+
+svg {
+  z-index: -1;
+  opacity: 0.1;
+}
