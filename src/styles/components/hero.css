@@ -3,8 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .title-hero p {
@@ -26,11 +25,11 @@
 }
 
 .figure {
-  width: 500px;
-  height: 100%;
+  width: 550px;
+  height: 100vh;
 }
 
-.about-container {
+.about-bouncer {
   display: flex;
   justify-content: center;
   align-items: center;

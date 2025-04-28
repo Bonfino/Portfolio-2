@@ -52,8 +52,8 @@ export default function Geometry() {
       const dx = x - lastMouse.current.x;
       const dy = y - lastMouse.current.y;
 
-      rotationSpeed.current.x = dx * 0.75; // Sensibilità X
-      rotationSpeed.current.y = dy * 0.75; // Sensibilità Y
+      rotationSpeed.current.x += dx * 0.15;
+      rotationSpeed.current.y += dy * 0.15;
 
       lastMouse.current = { x, y };
     };
