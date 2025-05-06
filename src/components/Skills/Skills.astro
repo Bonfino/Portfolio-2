@@ -1,0 +1,26 @@
+---
+import "/src/styles/components/skills.css";
+import SkillCard from "./SkillCard.jsx";
+
+const programmingTools = [
+  {
+    name: "React",
+    icon: "https://cdn.simpleicons.org/react/61DAFB",
+  },
+  {
+    name: "NodeJS",
+    icon: "https://cdn.simpleicons.org/node.js/5FA04E",
+  },
+];
+---
+
+<div class="skills-container">
+  <h1>Tech <span>Stacks</span></h1>
+  <div style="display:flex; gap:43px;">
+    <SkillCard title="Programming & Tools" logo={programmingTools} />
+    <SkillCard title="Languages & Engines" logo={programmingTools} />
+  </div>
+  <div style="margin-top: 43px;">
+    <SkillCard title="Certificates" logo={programmingTools} />
+  </div>
+</div>

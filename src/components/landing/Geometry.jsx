@@ -63,7 +63,7 @@ export default function Geometry() {
   }, []);
 
   return (
-    <Canvas camera={{ position: [5, 5, 5], fov: 25 }}>
+    <Canvas camera={{ position: [4, 4, 4], fov: 25 }}>
       <Model rotationSpeed={rotationSpeed} />
       <Light />
     </Canvas>

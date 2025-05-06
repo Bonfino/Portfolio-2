@@ -18,6 +18,9 @@
 
 .title-hero p:nth-child(2) {
   font-size: 72px;
+  background-image: linear-gradient(90deg, #00E0D1, #00635D);
+  background-clip: text;
+  color: transparent;
 }
 
 .title-hero p:last-child {
