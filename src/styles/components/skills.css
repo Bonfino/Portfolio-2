@@ -1,83 +1,141 @@
 .skills-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0f172a;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100wh;
-  height: 100vh;
-  background-color: #0f172a;
+  justify-content: flex-start;
+  padding: 4rem 0;
+  overflow-x: hidden;
 }
 
-.skills-container h1 {
-  font-size: 28px;
+.skills-cards-layout {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.skills-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.center-row {
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.skills-container > h1 {
+  text-align: center;
+  font-size: 2.5rem;
   color: white;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(53, 191, 201, 0.3);
 }
 
-.skills-container h1 span {
-  margin-top: 5%;
-  background-image: linear-gradient(90deg, #35bfc9, #1a5e63);
+.skills-container > h1 > span {
+  background-image: linear-gradient(90deg, #35bfc9, #38f9d7);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
+  font-weight: 600;
 }
 
-/*  SkillCard   */
-
+/* Skill Card Modernizzata */
 .card-container {
-  width: 600px;
-  height: 200px;
-  border-radius: 20px;
-  background-color: #0f172f;
-  border-style: solid;
-  border-color: #1a5e63;
-  box-shadow: 0 0 5px 0 #00bfb2;
-  transition: box-shadow 0.2s linear;
+  width: 100%;
+  max-width: 600px;
+  min-height: 200px;
+  border-radius: 1.25rem;
+  background: rgba(15, 23, 47, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(56, 249, 215, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-container::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #35bfc9, #38f9d7, #35bfc9);
+  z-index: -1;
+  border-radius: 1.3rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .card-container:hover {
-  box-shadow: 0 0 10px 0 #00bfb2;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-container:hover::before {
+  opacity: 0.3;
 }
 
 .card-container h1 {
-  color: #e5e7eb;
-  margin-left: 20px;
+  color: #f8fafc;
+  margin: 0 0 1rem 1rem;
+  font-size: 1.5rem;
 }
 
 .minicard-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.75rem;
   cursor: default;
+  padding: 0 1rem;
 }
 
 .card-info {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 110px;
-  height: 30px;
-  padding: 2px;
-  background-color: #141c38;
-  border-style: solid;
-  border-color: #00767640;
-  border-width: 1px;
-  border-radius: 25px;
-  box-shadow: 0 0 3px 0 #00bfb2;
-  transition: box-shadow 0.2s linear;
-}
-
-.card-info:first-child {
-  margin-left: 10px;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 110px;
+  height: 36px;
+  padding: 0 1rem;
+  background: rgba(20, 28, 56, 0.6);
+  border: 1px solid rgba(56, 249, 215, 0.1);
+  border-radius: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
 }
 
 .card-info:hover {
-  box-shadow: 0 0 10px 0 #00bfb2;
+  transform: scale(1.05);
+  background: rgba(56, 249, 215, 0.1);
+  border-color: rgba(56, 249, 215, 0.3);
+  box-shadow: 0 0 15px rgba(56, 249, 215, 0.4);
 }
 
 .card-info img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.card-info:hover img {
+  transform: scale(1.2);
 }
 
 .card-info span {
   color: #e5e7eb;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }

@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+/*
+import project1Img from "../assets/project1.png";
+import project2Img from "../assets/project2.png";
+import project3Img from "../assets/project3.png";
+*/
+import ProjectCard from "./ProjectCard.jsx";
+import "/src/styles/components/projects.css";
+
+const projects = [
+  {
+    title: "🕑 Time-tracker",
+    description: "A simple website to track your tasks.",
+    tags: ["React", "Vite", "Tailwind", "MongoDB"],
+    image: "https://picsum.photos/310/160",
+  },
+  {
+    title: "📝 Payout Reader",
+    description:
+      "A Chrome extension that lets you view test case payouts and fetch related information.",
+    tags: ["HTML", "Javascript", "CSS"],
+    image: "https://picsum.photos/310/160",
+  },
+  {
+    title: "👛 Portfolio",
+    description:
+      "A portfolio showcasing my projects, skills, and experience in software development.",
+    tags: ["Javascript", "Astro", "React", "Three.js"],
+    image: "/portfolio.png",
+  },
+];
+---
+
+<div class="projects-container">
+  <h1>My <span>Projects</span></h1>
+
+  <div class="project-cards-layout">
+    <div class="project-row">
+      {
+        projects.map((project) => (
+          <div class="project-minicard">
+            <Image
+              src={project.image}
+              width={310}
+              height={160}
+              alt={project.title}
+              format="webp"
+              draggable="false"
+              class="project-image"
+            />
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

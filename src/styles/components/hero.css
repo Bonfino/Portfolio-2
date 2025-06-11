@@ -17,10 +17,15 @@
 }
 
 .title-hero p:nth-child(2) {
-  font-size: 72px;
-  background-image: linear-gradient(90deg, #00E0D1, #00635D);
+  font-size: 64px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+  background-image: linear-gradient(90deg, #35bfc9, #38f9d7);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
+  text-shadow: 0 0 10px rgba(56, 249, 215, 0.2);
 }
 
 .title-hero p:last-child {
@@ -28,7 +33,7 @@
 }
 
 .figure {
-  width: 550px;
+  width: 500px;
   height: 100vh;
 }
 

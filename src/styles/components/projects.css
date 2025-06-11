@@ -1,0 +1,129 @@
+/* Container principale */
+.projects-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.projects-container > h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 10px rgba(53, 191, 201, 0.3);
+}
+
+.projects-container > h1 > span {
+  background-image: linear-gradient(90deg, #35bfc9, #38f9d7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+/* Layout cards */
+.project-cards-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 2rem;
+}
+
+.project-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Card progetto */
+.project-minicard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  height: 450px;
+  background: rgba(15, 23, 47, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(56, 249, 215, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-minicard::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #35bfc9, #38f9d7, #35bfc9);
+  z-index: -1;
+  border-radius: 1.1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-minicard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.project-minicard:hover::before {
+  opacity: 0.3;
+}
+
+.project-minicard > h1 {
+  margin: 1.5rem 0 1rem 1.5rem;
+  color: #f8fafc;
+  font-size: 1.5rem;
+}
+
+.project-minicard > p {
+  margin: 0 1.5rem 1rem;
+  color: #c6c9d0;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.project-minicard > img {
+  width: calc(100% - 2.5rem);
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin: 1.5rem auto 1.5rem;
+}
+
+/* Tags */
+.project-minicard-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 1.5rem 1.5rem;
+  cursor: default;
+}
+
+.project-minicard-tags .tag {
+  padding: 0.3rem 0.8rem;
+  background: rgba(23, 53, 73, 0.6);
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  color: #5ff3d1;
+  border: 1px solid rgba(56, 249, 215, 0.1);
+  transition: all 0.2s ease;
+}
+
+.project-minicard-tags .tag:hover {
+  background: rgba(56, 249, 215, 0.1);
+  transform: scale(1.05);
+}
