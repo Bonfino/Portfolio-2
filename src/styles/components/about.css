@@ -1,21 +1,24 @@
+/* ===== ABOUT SECTION ===== */
 .about-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
-  padding: 40px 20px;
+  padding-top: 40px;
   background-color: #0f172a;
-  gap: 60px;
+  gap: 40px;
   overflow-x: hidden;
 }
 
+/* Profile Box */
 .pfp-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
   padding: 30px 20px;
   background: rgba(12, 32, 49, 0.8);
   border-radius: 30px;
@@ -23,29 +26,41 @@
   border: 1px solid rgba(53, 190, 141, 0.2);
   backdrop-filter: blur(6px);
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.pfp-box:hover {
+  transform: translateY(-5px);
 }
 
 .pfp-icon img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
+  object-fit: cover;
   box-shadow: 0 0 15px rgba(56, 249, 215, 0.3);
+  border: 2px solid rgba(56, 249, 215, 0.1);
 }
 
 .pfp-box h1 {
   color: white;
-  margin-top: 20px;
+  margin: 20px 0 10px 0;
   font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .pfp-box p {
   color: #b9b9b9;
-  margin-top: 10px;
+  margin: 10px 0;
   font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* Info Box */
 .info-box {
+  width: 100%;
   max-width: 500px;
-  padding: 30px;
+  padding: 25px;
   background: rgba(12, 32, 49, 0.8);
   border-radius: 25px;
   backdrop-filter: blur(6px);
@@ -53,7 +68,12 @@
   border: 1px solid rgba(53, 190, 141, 0.2);
   color: white;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
+  transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
 }
 
 .about-text p {
@@ -64,12 +84,10 @@
 /* CV Box */
 .cv-box {
   margin-top: 25px;
-  align-self: center;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
-  width: fit-content;
-  padding: 10px 20px;
+  padding: 12px 24px;
   background: rgba(56, 249, 215, 0.1);
   border-radius: 20px;
   color: #38f9d7;
@@ -77,10 +95,82 @@
   box-shadow: 0 0 10px rgba(56, 249, 215, 0.2);
   transition: all 0.3s ease;
   cursor: pointer;
+  border: none;
+  font-size: 1rem;
 }
 
 .cv-box:hover {
   background: rgba(56, 249, 215, 0.2);
   color: white;
   box-shadow: 0 0 15px rgba(56, 249, 215, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(4px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    padding: 40px 0px;
+    gap: 30px;
+  }
+
+  .pfp-box {
+    width: 80%;
+    padding: 25px 15px;
+  }
+
+  .pfp-icon img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .pfp-box h1 {
+    font-size: 1.4rem;
+  }
+
+  .pfp-box p {
+    font-size: 0.95rem;
+  }
+
+  .info-box {
+    width: 80%;
+    padding: 10px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .cv-box {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-container {
+    gap: 80px;
+    padding: 60px 0px 0px 0px;
+  }
+
+  .pfp-box {
+    padding: 40px 30px;
+  }
+
+  .info-box {
+    padding: 35px 30px;
+    font-size: 1.1rem;
+  }
 }

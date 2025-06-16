@@ -1,7 +1,7 @@
 /* Container principale */
 .projects-container {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background-color: #0f172a;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@
   align-items: center;
   width: 100%;
   max-width: 1400px;
-  padding: 0 2rem;
+  padding: 0;
 }
 
 .project-row {
@@ -96,12 +96,24 @@
   flex-grow: 1;
 }
 
-.project-minicard > img {
+.project-minicard > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-minicard > a > img {
   width: calc(100% - 2.5rem);
   height: 150px;
   object-fit: cover;
   border-radius: 0.5rem;
   margin: 1.5rem auto 1.5rem;
+}
+
+.project-minicard > a > img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(56, 249, 215, 0.4);
+  transition: all 0.3s ease;
 }
 
 /* Tags */
@@ -126,4 +138,8 @@
 .project-minicard-tags .tag:hover {
   background: rgba(56, 249, 215, 0.1);
   transform: scale(1.05);
+}
+
+.a-test {
+  color: white;
 }

@@ -1,20 +1,115 @@
+/* ===== HEADER STYLES ===== */
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
-  width: 90%;
-  border-radius: 30px;
-  margin-top: 10px;
-}
-
-.header-container p {
-  color: white;
-  margin: 0 15px 0 15px;
+  height: 60px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 
 .logo-container p {
   color: #00e0d1;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.4rem;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.logo-container:hover p {
+  text-shadow: 0 0 8px rgba(0, 224, 209, 0.6);
+}
+
+.link-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.link-container a {
+  color: #00e0d1;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.link-container a:hover {
+  color: #38f9d7;
+  text-shadow: 0 0 6px rgba(56, 249, 215, 0.4);
+}
+
+/* Underline animation */
+.link-container a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #38f9d7;
+  transition: width 0.3s ease;
+}
+
+.link-container a:hover::after {
+  width: 100%;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header-container {
+    height: 50px;
+    padding: 0 15px;
+  }
+
+  .logo-container p {
+    font-size: 1.2rem;
+  }
+
+  .link-container {
+    gap: 1rem;
+  }
+
+  .link-container a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    margin: 0;
+    gap: 0.5rem;
+  }
+
+  .logo-container {
+    margin-bottom: 0.5rem;
+  }
+
+  .link-container {
+    width: 100%;
+    justify-content: space-around;
+    gap: 0;
+  }
 }
