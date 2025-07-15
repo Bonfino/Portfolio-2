@@ -143,3 +143,51 @@
 .a-test {
   color: white;
 }
+
+@media screen and (min-width: 1440px) {
+  .projects-container > h1 {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .project-cards-layout {
+    max-width: 1700px;
+    padding: 0 2rem;
+  }
+
+  .project-row {
+    gap: 3rem;
+  }
+
+  .project-minicard {
+    max-width: 420px;
+    height: 520px;
+    border-radius: 1.2rem;
+  }
+
+  .project-minicard > h1 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1.2rem 2rem;
+  }
+
+  .project-minicard > p {
+    font-size: 1.05rem;
+    margin: 0 2rem 1.2rem;
+  }
+
+  .project-minicard > a > img {
+    width: calc(100% - 3rem);
+    height: 180px;
+    margin: 2rem auto 1.5rem;
+  }
+
+  .project-minicard-tags {
+    gap: 0.7rem;
+    margin: 0 2rem 2rem;
+  }
+
+  .project-minicard-tags .tag {
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+  }
+}

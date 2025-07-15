@@ -113,3 +113,22 @@
     gap: 0;
   }
 }
+
+@media (min-width: 1440px) {
+  .header-container {
+    height: 80px;
+    padding: 0 40px;
+  }
+
+  .logo-container p {
+    font-size: clamp(1.4rem, 2vw, 2rem);
+  }
+
+  .link-container a {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+  }
+
+  .link-container {
+    gap: 2rem;
+  }
+}

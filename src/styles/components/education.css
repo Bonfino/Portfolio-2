@@ -267,3 +267,44 @@
     height: 48px;
   }
 }
+
+@media (min-width: 1440px) {
+  .education-container > h1 {
+    font-size: 3.5rem;
+  }
+
+  .timeline {
+    width: 70%;
+    gap: 60px;
+  }
+
+  .timeline-item {
+    font-size: 1.3rem;
+    padding: 35px;
+    min-height: 250px;
+  }
+
+  .timeline h3 {
+    font-size: 1.6rem;
+  }
+
+  .timeline p {
+    font-size: 1.1rem;
+  }
+
+  .timeline-link {
+    font-size: 1rem;
+  }
+
+  .button-switch {
+    width: 320px;
+    height: 64px;
+  }
+
+  .button-education,
+  .button-work {
+    font-size: 1.1rem;
+    width: 140px;
+    height: 52px;
+  }
+}

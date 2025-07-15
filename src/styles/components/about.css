@@ -174,3 +174,40 @@
     font-size: 1.1rem;
   }
 }
+
+@media (min-width: 1440px) {
+  .pfp-box {
+    max-width: 420px;
+    padding: 50px 40px;
+  }
+
+  .pfp-box h1 {
+    font-size: 2rem;
+  }
+
+  .pfp-box p {
+    font-size: 1.2rem;
+  }
+
+  .pfp-icon img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .info-box {
+    max-width: 600px;
+    font-size: 1.2rem;
+    padding: 40px;
+    line-height: 2;
+  }
+
+  .cv-box {
+    font-size: 1.1rem;
+    padding: 14px 28px;
+  }
+
+  .about-container {
+    gap: 100px;
+    padding-top: 80px;
+  }
+}

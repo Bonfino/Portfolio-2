@@ -98,10 +98,8 @@
 .minicard-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 0.75rem;
   cursor: default;
-  padding: 0;
 }
 
 .card-info {
@@ -201,11 +199,5 @@
 
   .card-info {
     min-width: 110px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .skills-cards-layout {
-    width: 90%;
   }
 }
