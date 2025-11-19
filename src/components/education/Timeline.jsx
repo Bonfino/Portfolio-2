@@ -9,7 +9,7 @@ export default function Timeline({ selected }) {
     },
     {
       year: "2022 - 2024",
-      desc: "Bachelor’s degree in Computer Engineering (incomplete)",
+      desc: "Bachelor’s degree in Computer Engineering (2 years)",
       website: "https://unige.it",
     },
     {
@@ -20,6 +20,11 @@ export default function Timeline({ selected }) {
   ];
 
   const workData = [
+    {
+      year: "2025 - Now",
+      desc: "Team Test Lead (TTL) - " + "Coordinating test cycles, supporting the tester community, validating test cases, and ensuring bug report quality.",
+      website: "https://support.utest.com/csp?id=kb_article_view&sysparm_article=KB0010085&sys_kb_id=0b534065dbe3bc10dccccf5e13961982&spa=1",
+    },
     {
       year: "2023 - Now",
       desc:
@@ -41,7 +46,6 @@ export default function Timeline({ selected }) {
           <h3>{item.year}</h3>
           <p>{item.desc}</p>
 
-          {/* Aggiungi il link solo se esiste item.website */}
           {item.website && (
             <a
               className="timeline-link"
